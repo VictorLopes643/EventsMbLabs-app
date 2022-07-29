@@ -6,22 +6,22 @@ export const Container = styled.SafeAreaView`
   justify-content: center;
   align-items: center;
   input{
-    border-radius: 20;
+    border-radius: 20px;
     background-color: aliceblue;
   }
   `
 
 
   export const Imgs = styled.Image`
-  height:150;
-  width: 250;
+  height:150px;
+  width: 250px;
 
   `
   export const InputLogin = styled.TextInput`
-  height: 40;
-  border-width: 1;
+  height: 40px;
+  border-width: 1px;
   padding: 10px;
-  border-radius: 8;
+  border-radius: 8px;
   margin-top: 20px;
   background: #393939;
   color:#fff;

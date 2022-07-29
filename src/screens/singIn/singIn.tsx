@@ -1,7 +1,6 @@
 import React, { FormEvent, useState, useContext, useEffect } from 'react'
 import {   Keyboard, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
-import {  Buttons, Container, Content, Imgs, InputLogin, Login, SingInText } from "./styled";
-import {  } from 'react-native';
+import {  Buttons, Container, Content, Imgs, InputLogin, Login, SingInText } from "./styles";
 import { AuthContext } from '../../service/auth';
 
 export function SingIn({ navigation }){
@@ -9,6 +8,7 @@ export function SingIn({ navigation }){
   const [ password, SetPassword ] = useState('');  
   const { singIn } = useContext(AuthContext)
   const { user } = useContext(AuthContext)
+
   useEffect(() =>{
     if(user){
       navigation.navigate('Events')
@@ -18,6 +18,8 @@ export function SingIn({ navigation }){
       console.log("n mas veio aq")
     }
   },[!user])
+  ////
+  
   // function noUserSubmit(){
   //   handleSubmit
   //   console.log('chamo')
@@ -36,17 +38,11 @@ export function SingIn({ navigation }){
       email,
       password,
     }
-    // console.log(data)
     await singIn(data);
     if(user){
-      console.log(' tem usuer')
+      // console.log(' tem usuer')
       navigation.navigate('Events')
 
-    }
-    if(!user){
-      console.log('nao tem usuer')
-      // noUserSubmit()
-      // navigation.push('Events')
     }
   }
   return(
@@ -71,8 +67,8 @@ export function SingIn({ navigation }){
             />
             <TouchableOpacity>
               <SingInText
-           
-              >
+                onPress={() => navigation.navigate('NewClientCreate')}
+                accessibilityLabel="Button entrar">
                 Não tem cadastro? Cadastre-se
               </SingInText>
             </TouchableOpacity>
