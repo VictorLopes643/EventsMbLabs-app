@@ -36,6 +36,7 @@ type SingInCredentials = {
   description:string;
   place:string;
   id_companies:string
+  capa:string
  }
  type CompaniesProps = {
   email:string 
@@ -90,6 +91,7 @@ type SingInCredentials = {
       amount,
       description,
       place,
+      capa,
       id_companies
     }:CreateEventProps){
       try{
@@ -101,6 +103,7 @@ type SingInCredentials = {
           amount,
           description,
           place,
+          capa,
           id_companies
         })
         console.log("aqui: ",response.data)

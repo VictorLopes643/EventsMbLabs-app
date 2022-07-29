@@ -2,6 +2,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useContext, useEffect, useState } from "react";
 import { Text, View } from "react-native";
 import { event } from "react-native-reanimated";
+import Capa from "../../../components/capa/capa";
+import Photo from "../../../components/photo/photo";
 import { AuthContext } from "../../../service/auth";
 
 // import { getPrismic } from "../../../service/prismic";
@@ -13,8 +15,9 @@ interface ICards{
   data:string,
   title:string,
   description:string
+  imgPhoto:string
 }
-export default function EventCard({data, title,description } :ICards){
+export default function EventCard({data, title,description, imgPhoto } :ICards){
   const desc = description;
   const [res, setRes] = useState('')
 
@@ -47,8 +50,8 @@ export default function EventCard({data, title,description } :ICards){
         <DataText>{data}</DataText>
       </DataView>
       <Content>
-        <BoxImg>
-        </BoxImg>
+        <Capa uri={imgPhoto} />
+
         <Title>{title}</Title>
         <Description>{res ===''? desc:res+'...'} </Description>
       </Content>

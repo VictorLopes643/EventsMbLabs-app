@@ -48,3 +48,38 @@ margin-top: 20px;
  margin-right:10px;
  font-size: 12px;
  `;
+ export const ContentBox = styled.View`
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+ `;
+ export const ImgBox = styled.View`
+  height: 80px;
+  width:150px;
+  border-radius: 20px;
+  align-self: stretch;
+  /* background: transparent; */
+  border: 1px;
+  border-style:dashed;
+  border-color: #fff;
+  align-items: center;
+  justify-content: center;
+  image{
+    z-index: 99999;
+  }
+  /* position: absolute; */
+ `;
+ export const ImgText = styled.Text`
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  /* margin-left: 55px; */
+ `;
+  export const AddImg = styled.Text`
+  font-weight:bold;
+  font-size: 20px;
+  color: #FF9200;
+
+  `;

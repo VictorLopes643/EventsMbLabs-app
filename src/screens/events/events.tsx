@@ -110,7 +110,7 @@ export  function Events({ navigation }){
         <>
         {searchList.map((e):any => {
         return(
-          <EventCard key={e.id} title={e.name} data={e.data} description={e.description} />
+          <EventCard key={e.id} title={e.name} data={e.data} description={e.description} imgPhoto={e.capa} />
         )
       })}
         </>
@@ -118,7 +118,7 @@ export  function Events({ navigation }){
         <>
           {event.map((e):any => {
             return(
-              <EventCard key={e.id} title={e.name} data={e.data} description={e.description} />
+              <EventCard key={e.id} title={e.name} data={e.data} description={e.description} imgPhoto={e.capa} />
           )
       })}
         </>
